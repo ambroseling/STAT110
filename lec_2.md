@@ -1,0 +1,41 @@
+# Story Proofs, Axoims of Probability
+- try edge cases, different cases, simple and extreme cases (plug in different numbers)
+- finding the simplest non - trivial case
+- label everything
+
+- E.g. pick k times from set of n objects, where order doesnt matter with replacement
+    - Ans: $ {n+k-1 \choose k}$
+    - Extreme cases:
+        - k = 0 =>  $ {n-1 \choose 0}$ = 1
+        - k = 1 => $ {n \choose 1}$ = n
+        - n = 2 => $  {k+1 \choose k}$ = k + 1
+    - Better way to think about it:
+        - how many ways are there to put k indistinguishable particles in n boxes?
+            - $ * * *  | | * * | $
+            - there must be k $*$ 's and n -1 |'s
+            - ${n+k-1 \choose k} = {n+k-1 \choose n-1}$ 
+- Story proofs:
+    - ${n \choose k} = {n \choose k-1}$
+    - application / proof by interpretation:
+        - think about what it means than using factoraisl
+    - ${n \choose k} = {n \choose n-k}$
+    - 2. $ n {n-1 \choose k-1} = k {n \choose k}$
+    - Interpretation:
+        - Pick $k$ people out of $n$, with 1 designated as president
+        - Left side: you pick the president first then pick the k people you want to select to be in your club
+        - Count the same thing in 2 ways
+    - 3. ${m+n \choose k} = {\Sigma_{j=0}^{k} {m \choose j} {n \choose k-j}}$
+        -  Interpretation:
+            - thinking about it as still picking k people out of m+n  amount of people
+            - m can mean 1 group of ppl, n can mean another group of ppl
+            - m: * * * 
+            - n: * * * * 
+- Non-naive definition: probability sample consists of $S$ and $P$
+    - $S$ is sample space
+    - $P$ is a function which takes an event $A \subset S$ as input. returns $P(A) \in [0,1]$ as outputs 
+    - 2 axioms:
+        - $P(\phi) = 0$
+            - what does it mean to have an empty set?
+                - we want impossible events to have probability of 0
+        - $P(S) = 1$:
+            - $P(\cup^\infty A_n) = \Sigma_{n=1}^{\infty} P(A_n)$ **iff** $P(A_1), P(A_2), P(A_3)...$ are disjoint, they dont overlap 

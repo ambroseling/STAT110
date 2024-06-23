@@ -1,0 +1,27 @@
+# Probabilty and Counting
+- Sample space:
+    - set of all possible outcomes of the experiment (experiment can be anything)
+    - represented by $S$
+- Event:
+    - subset of the sample space
+    - can be represented by $A$
+- Naive Def of Prob: $P(A) = \text{number of favourable outcomes} / \text{number of possible outcomes}$
+    - this definition assumes that all outcomes are equally likley, with a finite sample space
+    - you cannot apply the naive def if you dont have equally likely outcomes
+- Counting
+    - multiplication rule: if we have an experiment with $n_1$ possible outcomes, and for each outcome of 1st experiment there are $n_2$ outcomes and so on for each there are $n_r$. Therefore, **there are $n_1*n_2\cdots n_r$ overall possible outomces**
+        - use a tree diagram
+- Binomial Coefficient: $$
+- Ex: Prob of full house in poker, 5 card hand:
+    - n choose k :
+        - ${N\choose k} = \frac{n!}{(n-k)!k!}$
+    - $\frac{ 13 * {4 \choose 3} * 12 * {4 \choose 2} }{{52\choose 5} }$
+        - 13 choices (2-K)
+        - 12 choices left after you select one type of card
+        - 4 choices for each card (hearts,daimonds)
+- Sampling table: choose k objects out of n
+    - ** with replacement means you can pick it again
+    - Order matters, replace = $n^k$
+    - Order doesnt matter, replace = ${ n+k-1 \choose k}$
+    - Order matters, dont replace = $ {n \choose k}$
+    - Order doesnt matter, dont replace = $n * (n -1) * \cdots*(n-k+1)$
