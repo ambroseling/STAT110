@@ -11,20 +11,20 @@
     - 
 
 # Simpsons paradox
-    - Dr Hibert
-        -           heart   bandaid removal
-        - Success:   70         10
-        - Failure:   20          0
-    - Dr Nick
-        -           heart   bandaid removal
-        - Success:   2           81
-        - Failure:   8            9
-    - You can say Nick has higher success rate but that is unconditional
-    - Conditional on heart and bandaid, Hibert is actually better
-    - A: surgery is successful
-    - B: treated by Dr Nick
-    - C: have heart surgery (confounder,control)
-    - $P(A|B,C) < P(A|B^C,C)$
-    - $P(A|B,C^C) < P(A|B^C,C^C)$
-    - $P(A|B) > P(A|B^C)$ 
-    - $P(A|B) = P(A|B,C)P(C|B) + P(A|B,C^C)P(C^C|B)$
+- Dr Hibert
+    -           heart   bandaid removal
+    - Success:   70         10
+    - Failure:   20          0
+- Dr Nick
+    -           heart   bandaid removal
+    - Success:   2           81
+    - Failure:   8            9
+- You can say Nick has higher success rate but that is unconditional
+- Conditional on heart and bandaid, Hibert is actually better
+- A: surgery is successful
+- B: treated by Dr Nick
+- C: have heart surgery (confounder,control)
+- $P(A|B,C) < P(A|B^C,C)$
+- $P(A|B,C^C) < P(A|B^C,C^C)$
+- $P(A|B) > P(A|B^C)$ 
+- $P(A|B) = P(A|B,C)P(C|B) + P(A|B,C^C)P(C^C|B)$
